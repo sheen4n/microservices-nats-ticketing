@@ -13,6 +13,8 @@ export default ({ req }) => {
   } else {
     // we are on the browser!
     // request can be made to base url of ''
-    return axios.create({});
+    return axios.create({
+      baseUrl: '/',
+    });
   }
 };
