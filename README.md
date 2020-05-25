@@ -25,8 +25,10 @@ To run the project locally,
 skaffold dev
 ```
 
-[screenshot.jpg][screenshot2.jpg]
-[screenshot3.jpg][screenshot4.jpg]
+![Screenshot3](screenshot3.jpg)
+![Screenshot4](screenshot4.jpg)
+![Screenshot](screenshot.jpg)
+![Screenshot2](screenshot2.jpg)
 
 ## Credits
 
