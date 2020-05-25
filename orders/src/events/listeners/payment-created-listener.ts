@@ -18,7 +18,7 @@ export class PaymentCreatedListener extends Listener<PaymentCreatedEvent> {
 
     if (!order) throw new Error('Order not found');
 
-    order.set({ status: OrderStatus.Complete });
+    order.set({ status: OrderStatus.Complete, paymentDate: new Date() });
 
     await order.save();
 

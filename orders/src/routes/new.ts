@@ -15,7 +15,8 @@ import { natsWrapper } from '../nats-wrapper';
 
 const router = express.Router();
 
-const EXPIRATION_WINDOW_SECONDS = 15 * 60; // Default 15 minutes
+// const EXPIRATION_WINDOW_SECONDS = 15 * 60; // Default 15 minutes
+const EXPIRATION_WINDOW_SECONDS = 60; // Changed to 1 Minute For Testing
 
 router.post(
   '/api/orders',
@@ -36,7 +37,7 @@ router.post(
 
     // Make sure ticket is not reserved
     const isReserved = await ticket.isReserved();
-    if (isReserved) throw new BadRequestError('Ticket is already reserved');
+    if (isReserved) throw new BadRequestError('Ticket is already reserved!');
 
     // Calculate an expiration date for this order
     const expiration = new Date();
@@ -69,4 +70,4 @@ router.post(
   }
 );
 
-export { router as createOrderRouter };
+export { router as newOrderRouter };

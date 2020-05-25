@@ -5,7 +5,7 @@ import cookieSession from 'cookie-session';
 
 import { errorHandler, NotFoundError, currentUser } from '@sheen4ntix/common';
 import { indexOrderRouter } from './routes/index';
-import { createOrderRouter } from './routes/new';
+import { newOrderRouter } from './routes/new';
 import { showOrderRouter } from './routes/show';
 import { deleteOrderRouter } from './routes/delete';
 
@@ -21,10 +21,10 @@ app.use(
 
 app.use(currentUser);
 
-app.use(indexOrderRouter);
-app.use(showOrderRouter);
-app.use(createOrderRouter);
 app.use(deleteOrderRouter);
+app.use(indexOrderRouter);
+app.use(newOrderRouter);
+app.use(showOrderRouter);
 
 app.all('*', async () => {
   throw new NotFoundError();

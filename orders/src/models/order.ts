@@ -16,6 +16,7 @@ interface OrderDoc extends mongoose.Document {
   expiresAt: Date;
   ticket: TicketDoc;
   version: number;
+  paymentDate: Date;
 }
 
 interface OrderModel extends mongoose.Model<OrderDoc> {
@@ -35,6 +36,9 @@ const orderSchema = new mongoose.Schema(
       default: OrderStatus.Created,
     },
     expiresAt: {
+      type: mongoose.Schema.Types.Date,
+    },
+    paymentDate: {
       type: mongoose.Schema.Types.Date,
     },
     ticket: {

@@ -17,7 +17,7 @@ var Listener = /** @class */ (function () {
         var _this = this;
         var subscription = this.client.subscribe(this.subject, this.queueGroupName, this.subscriptionOptions());
         subscription.on('message', function (msg) {
-            // console.log(`Message received: ${this.subject} / ${this.queueGroupName}`);
+            console.log("Message received: " + _this.subject + " / " + _this.queueGroupName);
             var parsedData = _this.parseMessage(msg);
             _this.onMessage(parsedData, msg);
         });
