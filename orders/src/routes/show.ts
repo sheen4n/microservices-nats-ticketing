@@ -18,7 +18,7 @@ router.get(
 
     if (order.userId !== req.currentUser!.id) throw new NotAuthorizedError();
 
-    res.status(200).send(order);
+    res.send(order);
   }
 );
 

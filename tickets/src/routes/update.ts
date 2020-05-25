@@ -48,7 +48,7 @@ router.put(
       version: ticket.version,
     });
 
-    res.status(200).send(ticket);
+    res.send(ticket);
   }
 );
 
