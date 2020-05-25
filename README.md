@@ -25,6 +25,9 @@ To run the project locally,
 skaffold dev
 ```
 
+[screenshot.jpg][screenshot2.jpg]
+[screenshot3.jpg][screenshot4.jpg]
+
 ## Credits
 
 Stephen Grider - Udemy Engineering Architect and Instructor for the wonderful course
