@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Index = ({ currentUser, tickets }) => {
+const LandingPage = ({ currentUser, tickets }) => {
   if (tickets.length === 0)
     return (
       <div>
@@ -41,9 +41,9 @@ const Index = ({ currentUser, tickets }) => {
   );
 };
 
-Index.getInitialProps = async (context, client, currentUser) => {
+LandingPage.getInitialProps = async (context, client, currentUser) => {
   const { data: tickets } = await client.get('/api/tickets');
   return { tickets };
 };
 
-export default Index;
+export default LandingPage;
